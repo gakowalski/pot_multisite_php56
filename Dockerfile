@@ -21,7 +21,9 @@ COPY config/v-host.conf /etc/httpd/conf.d/
 RUN mkdir -p /var/www/html/portal
 VOLUME ["/var/www/html/portal", "/var/log/httpd"]
 
-EXPOSE 80
+EXPOSE 9001
+
+RUN sed -i "s/80/9001/g" /etc/httpd/conf/httpd.conf
 
 RUN systemctl enable httpd \
  && systemctl enable crond
