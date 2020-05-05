@@ -3,7 +3,7 @@ FROM centos:7
 ENV container docker
 
 RUN yum -y install https://dl.fedoraproject.org/pub/epel/epel-release-latest-7.noarch.rpm
-RUN yum -y install install https://rpms.remirepo.net/enterprise/remi-release-7.rpm
+RUN yum -y install https://rpms.remirepo.net/enterprise/remi-release-7.rpm
 RUN yum -y install yum-utils
 RUN yum-config-manager --enable remi-php56
 RUN yum -y update
